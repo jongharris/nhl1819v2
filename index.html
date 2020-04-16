@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel = "stylesheet" href = "./style.css">
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://d3js.org/d3-fetch.v1.js"></script>
+
+</head>
+<body><div class="container">
+    <header>
+        <!-- Header content -->
+        <div class = "nhlSeason">
+            <h2> NHL 2018/19</h2>
+
+        </div>
+        <h2> Boston Bruins vs St. Louis Blues</h2>
+    </header>
+
+    <nav>
+        <!-- Navigation -->
+        <div class = "formSelection">
+        <form>
+            <div class = "radioBox">
+                <label><input id="radio1" type="radio" name="radio" value="Update1" checked onclick="change(data1)"> Quarter season</label>
+            </div>
+            <div class = "radioBox">
+                <label><input id="radio2" type="radio" name="radio" value="Update2" onclick="change(data2)"> Half-season</label>
+            </div>
+            <div class = "radioBox">
+                <label><input id="radio3" type="radio" name="radio" value="Update3" onclick="change(data3)"> Three-quarter season</label>
+            </div>
+            <div class = "radioBox">
+                <label><input id="radio4" type="radio" name="radio" value="Update4" onclick="change(data4)"> End season</label>
+            </div>
+        </div>
+        </form>
+    </nav>
+
+    <main>
+        <!-- Main content -->
+
+        <div class = "narrBox">
+            <h2> Narrative </h2>
+            <div class="text1" style="display:none;">
+                <p>After 21 games, the St. Louis Blues were 8-10-3, 30th league-wide. They had recently fired their head coach Mike Yeo and promoted Craig Berube, an assistant coach, to the head coach job on an interim basis in an attempt to salvage a lost season. The Boston Bruins were 11-6-4 and ninth in the league, a respectable record but one they would improve upon over the course of the season.
+                </p>
+            </div>
+
+            <div class="text2" style="display:none;">
+                <p>After 42 games, the St. Louis Blues were 18-20-4, 25th in the league. Rookie goaltender Jordan Binnington had recently joined the team, winning his first two starts, but the Blues still sit six points out of a playoff spot. The Boston Bruins were 24-14-4, eighth in the league and pulling away from the wild-card teams in their conference off an all-star season by left-winger Brad Marchand.
+                </p>
+            </div>
+
+            <div class="text3" style="display:none;">
+                <p>After 63 games, the St. Louis Blues were 34-23-6, 14th in the league and now sitting in a playoff spot. The team had won 16 of its last 21 games, including an 11-game win streak. The Boston Bruins were 37-17-9 after having just completed a seven-game win streak and were third in the league, locked into an inevitable first-round playoff rematch against the Toronto Maple Leafs.
+                </p>
+            </div>
+
+            <div class="text4" style="display:none;">
+                <p>At the end of the season, the St. Louis Blues were 45-28-9. They beat the Winnipeg Jets, Dallas Stars and San Jose Sharks en route to the Stanley Cup Finals. The Boston Bruins were 49-24-9, third-best in the league. They beat the Toronto Maple Leafs, Columbus Blue Jackets and Carolina Hurricanes on their way to the Final. In the Cup Final, the Blues beat the Bruins in a seven games, with Blues captain Ryan O'Reilly named playoff MVP. It was the first-ever cup for the Blues, a feat made more impressive given that the Blues were the NHL's worst team in January.
+                </p>
+            </div>
+        </div>
+        <div class = "chartBox">
+
+        </div>
+
+    </main>
+
+    <aside>
+        <!-- Narration -->
+        <div class ="chartBox2">
+
+        </div>
+
+    </aside>
+
+    <footer>
+
+    </footer>
+
+</div>
+
+
+<!-- Script -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script type="text/javascript">
+    $('#radio1').on('click', function() {
+        $(".text1").show();
+        $(".text2").hide();
+        $(".text3").hide();
+        $(".text4").hide();
+    });
+
+    $('#radio2').on('click', function() {
+        $(".text1").hide();
+        $(".text2").show();
+        $(".text3").hide();
+        $(".text4").hide();
+    });
+
+    $('#radio3').on('click', function() {
+        $(".text1").hide();
+        $(".text2").hide();
+        $(".text3").show();
+        $(".text4").hide();
+    });
+
+    $('#radio4').on('click', function() {
+        $(".text1").hide();
+        $(".text2").hide();
+        $(".text3").hide();
+        $(".text4").show();
+    });
+</script>
+
+<script type = "text/javascript" src = "./index.js"></script>
+
+</body>
+</html>
